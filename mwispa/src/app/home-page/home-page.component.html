@@ -1,0 +1,43 @@
+<div class="container-fluid" style="background-color: #222222 !important">
+    <div class="row">
+      <div class="col-6">
+            <img src="/assets/Logo.png" class="d-inline-block align-top img-fluid img-fix mt-2" alt="">
+      </div>
+      <div class="col-6" style="background-color: #222222 !important">
+                  <a 
+                  class="nav-link float-right" 
+                  [routerLink]="['contact']" 
+                  style="color: #DEBF79 !important;"
+                  >contact <span class="sr-only">(current)</span></a>
+      </div>
+    </div>
+  </div>
+    <div class="container-fluid fill" style="background-color: #222222 !important">
+    <div class="row">
+      <div class="offset-md-2"></div> 
+        <div class="col-md-3  mt-5 text-center" *ngFor="let card of cards">
+            <div class="card" style="width: 20rem; height: 20rem;">
+                <img class="card-img-top img-fluid img-fix mt-4" src="{{card.card_img_src}}" alt="">
+                <div class="card-title"></div>
+                <div class="card-body text-center">
+                    <h2>{{card.card_heading}}</h2>
+                  <p class="card-text card-fix">{{card.card_paragraph}}</p>
+                  <button class="btn-fix">Learn More</button>
+                </div>
+               </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h1 style="color: #fff;" class="mt-5"><u class="heading-fix">Heading</u>  One</h1>
+            <p  style="color: #fff;">Remove the duplicates in 2 Javascript objects and output the list of 
+                distinct names in an unordered list when <a href="#" (click)="solvePuzzle()" style="color: #DEBF79 !important;">this link</a> is clicked.
+                If the operation has been completed already notify the user that this has already been done.
+            </p>
+            <ul *ngIf="clickedPuzzle">
+              <li *ngFor="let li of uniqueObj" style="color: #fff;">{{li}}</li>
+            </ul>
+        </div>
+
+    </div>
+    </div>

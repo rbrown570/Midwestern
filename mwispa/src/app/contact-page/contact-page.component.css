@@ -1,0 +1,53 @@
+.heading-fix {
+    color: #fff !important;
+    text-decoration-color: #DEBF79;
+    font-family: Poppins;
+}
+.input-fix {
+    background-color: #F5F5F5;
+    border: none;
+    font-family: Poppins;
+}
+.btn-fix {
+    color: #fff;
+    background-color: #DEBF79;
+    border: none;
+    padding: .5em;
+    font-family: Poppins;
+}
+
+@media only screen and (min-width : 320px) {
+    .link-fix {
+        background-color: #222222;
+    }
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+    .link-fix {
+        background-color: #222222;
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+    /* your mobile css, change this as you please */
+    .link-fix {
+        background-color: #222222;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+    .link-fix {
+        background-color: #fff;
+    }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+    /* your desktop css */
+    .link-fix {
+        background-color: #fff;
+    }
+}

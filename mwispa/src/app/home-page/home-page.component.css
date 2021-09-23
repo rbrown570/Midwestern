@@ -1,0 +1,23 @@
+body {
+    background: #222222 !important;
+    font-family: Poppins !important;
+}
+.img-fix {
+    flex-grow: 1;
+    object-fit:contain;
+    max-height: 75px;
+}
+.card-fix {
+    color: #858585;
+    font-family: Poppins;
+}
+.btn-fix {
+    color: #fff;
+    background-color: #DEBF79;
+    border: none;
+    padding: .5em;
+}
+.heading-fix {
+    color: #fff !important;
+    text-decoration-color: #DEBF79;
+}

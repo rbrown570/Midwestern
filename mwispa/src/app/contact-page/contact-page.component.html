@@ -1,0 +1,95 @@
+<div class="container-fluid" >
+    <div class="row">
+      
+      <div class="col-6" style="background-color: #222222 !important">
+            <img src="/assets/Logo.png" class="d-inline-block align-top img-fluid img-fix mt-2" alt="">
+      </div>
+      <div class="col-6 link-fix">
+
+                <a 
+                  class="nav-link float-right" 
+                  [routerLink]="['']" 
+                  style="color: #DEBF79 !important;">
+                  home 
+                  <span class="sr-only">(current)</span>
+                </a>
+      </div>
+    </div>
+  </div>
+<div class="container-fluid">
+    <div class="row fill">
+        <div class="col-md-6"  style="background-color: #222222 !important">
+                <h1 style="color: #fff;" class="mt-5"><u class="heading-fix">Heading</u>  One</h1>
+                <p  style="color: #fff;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Nunc magna quam, commodo quis justo eget, rhoncus tincidunt mi. Donec luctus.
+                </p>
+        </div>
+        <div class="col-md-6"  style="background-color: #fff;">
+            <div class="form-row ml-5 mr-5">
+                <div class="form-group col-md-12">
+                    <h2>Heading Two</h2>
+                </div>
+            </div>
+            
+            <form [formGroup]="contactForm" (ngSubmit)="addNewContact()">
+            <div class="form-row ml-5 mr-5">
+                <div class="form-group col-md-6">
+                    <input
+                    type="text" 
+                    value="" 
+                    class="form-control input-fix" 
+                    formControlName="first_name" 
+                    placeholder="First Name">
+
+                    <div  *ngIf="firstname?.invalid && (firstname?.dirty || firstname?.touched)" class="alert alert-danger">
+                      <div *ngIf="firstname?.errors?.required">
+                        First Name is required.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <input type="text" value="" class="form-control input-fix" formControlName="last_name" placeholder="Last Name">
+                    <div  *ngIf="lastname?.invalid && (lastname?.dirty || lastname?.touched)" class="alert alert-danger">
+                      <div *ngIf="lastname?.errors?.required">
+                        Last Name is required.
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="form-row ml-5 mr-5">
+               <div class="form-group col-md-6">
+                <input type="text" value="" class="form-control input-fix" formControlName="title" placeholder="Title">
+                <div  *ngIf="title?.invalid && (title?.dirty || title?.touched)" class="alert alert-danger">
+                  <div *ngIf="title?.errors?.required">
+                    Title is required.
+                  </div>
+                </div>
+              </div> 
+              <div class="form-group col-md-6">
+                    <input type="email" value="" class="form-control input-fix" formControlName="email" placeholder="Email">
+                    <div  *ngIf="email?.invalid && (email?.dirty || email?.touched)" class="alert alert-danger">
+                      <div *ngIf="email?.errors?.required">
+                        Email is required.
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="form-row ml-5 mr-5">
+            <div class="form-group col-md-12">
+                <textarea value="" class="form-control input-fix" formControlName="message" style="min-width: 100%; min-height: 8em;" placeholder="Message"></textarea>
+                <div  *ngIf="message?.invalid && (message?.dirty || message?.touched)" class="alert alert-danger">
+                  <div *ngIf="message?.errors?.required">
+                    Message is required.
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class="form-row col-md-12 text-center">
+            <div class="form-group col-md-12">
+                <button type="submit" class="btn-fix" [disabled]="!contactForm.valid">Submit</button>
+            </div>
+        </div>
+          </form>
+        </div>
+    </div>
+</div>
